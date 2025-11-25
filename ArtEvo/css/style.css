@@ -1,6 +1,6 @@
 body {
             margin: 0;
-            font-family: "Afacad Flux", sans-serif;
+            font-family: "Afacad Flux";
         }
 
         .container {
@@ -11,7 +11,7 @@ body {
         /* --- LEFT SIDE (LOGO + BACKGROUND) --- */
         .left {
             flex: 1;
-            background: #1877f2; /* Facebook-like color */
+            background: #E18E11;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,7 +51,7 @@ body {
             margin-top: 20px;
             padding: 12px;
             border: none;
-            background: #1877f2;
+            background: #663E1F;
             color: white;
             font-size: 16px;
             border-radius: 6px;
@@ -59,7 +59,7 @@ body {
         }
 
         button:hover {
-            background: #145dbf;
+            background: #e5d595;
         }
 
         .message {
