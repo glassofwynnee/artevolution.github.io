@@ -1,82 +1,224 @@
 <!DOCTYPE html>
-</header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArtEvo Gallery | Home</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-<!-- CAROUSEL -->
-<section class="carousel-container" id="home">
-<img id="carouselImage" src="art1.jpg" alt="Carousel Image" />
-<button id="viewGalleryBtn">View Gallery</button>
-</section>
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
+        .logo {
+            width: 70px;
+            height: auto;
+        }
 
-<!-- DESCRIPTION -->
-<section id="description">
-<h2>Welcome to ArtEvo Gallery</h2>
-<p>Discover creativity through the works of talented artists. Our gallery features evolving art styles, immersive visuals, and inspiring craftsmanship.</p>
-</section>
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+        }
 
+        nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+        }
 
-<!-- MISSION & VISION -->
-<section class="mv-section">
-<div class="mv-card">
-<h3>Our Mission</h3>
-<p>To showcase artists and help them share their creative journey with the world.</p>
-</div>
-<div class="mv-card">
-<h3>Our Vision</h3>
-<p>To become a global home for artistic innovation and inspiration.</p>
-</div>
-</section>
+        nav ul li a:hover {
+            color: #1877f2;
+        }
 
+        /* Carousel */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
 
-<!-- FEATURED ARTISTS -->
-<section id="artists">
-<h2>Featured Artists</h2>
-<div class="artist-grid">
-<div class="artist-card">
-<img src="artist1.jpg" alt="Artist 1" />
-<h4>Artist One</h4>
-<p>Modern painter inspired by vivid emotion and color.</p>
-</div>
-<div class="artist-card">
-<img src="artist2.jpg" alt="Artist 2" />
-<h4>Artist Two</h4>
-<p>Explores abstract shapes and bold geometric forms.</p>
-</div>
-<div class="artist-card">
-<img src="artist3.jpg" alt="Artist 3" />
-<h4>Artist Three</h4>
-<p>Fantasy and surreal digital artist with unique style.</p>
-</div>
-<div class="artist-card">
-<img src="artist4.jpg" alt="Artist 4" />
-<h4>Artist Four</h4>
-<p>Blends classical techniques with modern concepts.</p>
-</div>
-</div>
-</section>
+        .carousel-container img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
 
+        #viewGalleryBtn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 25px;
+            background: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-<!-- JAVASCRIPT -->
-<script>
-// Simple Carousel Logic (DOM Event)
-const carousel = document.getElementById("carouselImage");
-const images = ["art1.jpg", "art2.jpg", "art3.jpg"];
-let index = 0;
+        #viewGalleryBtn:hover {
+            background: #145dbf;
+        }
 
+        /* Description */
+        #description {
+            padding: 40px;
+            text-align: center;
+        }
 
-setInterval(() => {
-index = (index + 1) % images.length;
-carousel.src = images[index];
-}, 3000);
+        /* Mission & Vision */
+        .mv-section {
+            display: flex;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
 
+        .mv-card {
+            flex: 1;
+            min-width: 280px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f5f5f5;
+            transition: 0.3s;
+        }
 
-// Scroll to Gallery Button
-document.getElementById("viewGalleryBtn").addEventListener("click", () => {
-document.getElementById("artists").scrollIntoView({ behavior: "smooth" });
-});
-</script>
+        .mv-card:hover {
+            transform: scale(1.05);
+            background: #e0e0e0;
+        }
 
+        /* Featured Artists */
+        #artists {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .artist-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .artist-card {
+            padding: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="logo.png" class="logo" alt="ArtEvo Logo" />
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CAROUSEL -->
+    <section class="carousel-container" id="home">
+        <img id="carouselImage" src="art1.jpg" alt="Carousel Image" />
+        <button id="viewGalleryBtn">View Gallery</button>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section id="description">
+        <h2>Welcome to ArtEvo Gallery</h2>
+        <p>Discover creativity through the works of talented artists. Our gallery features evolving art styles, immersive visuals, and inspiring craftsmanship.</p>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="mv-section">
+        <div class="mv-card">
+            <h3>Our Mission</h3>
+            <p>To showcase artists and help them share their creative journey with the world.</p>
+        </div>
+        <div class="mv-card">
+            <h3>Our Vision</h3>
+            <p>To become a global home for artistic innovation and inspiration.</p>
+        </div>
+    </section>
+
+    <!-- FEATURED ARTISTS -->
+    <section id="artists">
+        <h2>Featured Artists</h2>
+        <div class="artist-grid">
+            <div class="artist-card">
+                <img src="artist1.jpg" alt="Artist 1" />
+                <h4>Artist One</h4>
+                <p>Modern painter inspired by vivid emotion and color.</p>
+            </div>
+            <div class="artist-card">
+                <img src="artist2.jpg" alt="Artist 2" />
+                <h4>Artist Two</h4>
+                <p>Explores abstract shapes and bold geometric forms.</p>
+            </div>
+            <div class="artist-card">
+                <img src="artist3.jpg" alt="Artist 3" />
+                <h4>Artist Three</h4>
+                <p>Fantasy and surreal digital artist with unique style.</p>
+            </div>
+            <div class="artist-card">
+                <img src="artist4.jpg" alt="Artist 4" />
+                <h4>Artist Four</h4>
+                <p>Blends classical techniques with modern concepts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Simple Carousel Logic (DOM Event)
+        const carousel = document.getElementById("carouselImage");
+        const images = ["art1.jpg", "art2.jpg", "art3.jpg"];        
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            carousel.src = images[index];
+        }, 3000);
+
+        // Scroll to Gallery Button
+        document.getElementById("viewGalleryBtn").addEventListener("click", () => {
+            document.getElementById("artists").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
 
 </body>
 </html>
