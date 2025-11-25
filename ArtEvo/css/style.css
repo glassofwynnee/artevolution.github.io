@@ -8,7 +8,7 @@ body {
             height: 100vh;
         }
 
-        /* --- LEFT SIDE (LOGO + BACKGROUND) --- */
+        /* Left side (logo + background) */
         .left {
             flex: 1;
             background: #E18E11;
@@ -20,7 +20,7 @@ body {
             font-weight: bold;
         }
 
-        /* --- RIGHT SIDE (SIGN UP FORM) --- */
+        /* Right side (sign up) */
         .right {
             flex: 1;
             display: flex;
@@ -69,7 +69,7 @@ body {
             display: none;
         }
 
-        /* --- RESPONSIVE SCREEN SIZES --- */
+        /* Responsiveness */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
