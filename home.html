@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<section id="description">
+<h2>Welcome to ArtEvo Gallery</h2>
+<p>Discover creativity through the works of talented artists. Our gallery features evolving art styles, immersive visuals, and inspiring craftsmanship.</p>
+</section>
+
+
+<!-- MISSION & VISION -->
+<section class="mv-section">
+<div class="mv-card">
+<h3>Our Mission</h3>
+<p>To showcase artists and help them share their creative journey with the world.</p>
+</div>
+<div class="mv-card">
+<h3>Our Vision</h3>
+<p>To become a global home for artistic innovation and inspiration.</p>
+</div>
+</section>
+
+
+<!-- FEATURED ARTISTS -->
+<section id="artists">
+<h2>Featured Artists</h2>
+<div class="artist-grid">
+<div class="artist-card">
+<img src="artist1.jpg" alt="Artist 1" />
+<h4>Artist One</h4>
+<p>Modern painter inspired by vivid emotion and color.</p>
+</div>
+<div class="artist-card">
+<img src="artist2.jpg" alt="Artist 2" />
+<h4>Artist Two</h4>
+<p>Explores abstract shapes and bold geometric forms.</p>
+</div>
+<div class="artist-card">
+<img src="artist3.jpg" alt="Artist 3" />
+<h4>Artist Three</h4>
+<p>Fantasy and surreal digital artist with unique style.</p>
+</div>
+<div class="artist-card">
+<img src="artist4.jpg" alt="Artist 4" />
+<h4>Artist Four</h4>
+<p>Blends classical techniques with modern concepts.</p>
+</div>
+</div>
+</section>
+
+
+<!-- JAVASCRIPT -->
+<script>
+// Simple Carousel Logic (DOM Event)
+const carousel = document.getElementById("carouselImage");
+const images = ["art1.jpg", "art2.jpg", "art3.jpg"];
+let index = 0;
+
+
+setInterval(() => {
+index = (index + 1) % images.length;
+carousel.src = images[index];
+}, 3000);
+
+
+// Scroll to Gallery Button
+document.getElementById("viewGalleryBtn").addEventListener("click", () => {
+document.getElementById("artists").scrollIntoView({ behavior: "smooth" });
+});
+</script>
+
+
+</body>
+</html>
