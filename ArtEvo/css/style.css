@@ -8,7 +8,6 @@ body {
             height: 100vh;
         }
 
-        /* Left side (logo + background) */
         .left {
             flex: 1;
             background: #E18E11;
@@ -20,7 +19,6 @@ body {
             font-weight: bold;
         }
 
-        /* Right side (sign up) */
         .right {
             flex: 1;
             display: flex;
@@ -56,6 +54,7 @@ body {
             font-size: 16px;
             border-radius: 6px;
             cursor: pointer;
+            font-family: "Afacad Flux";
         }
 
         button:hover {
@@ -69,7 +68,6 @@ body {
             display: none;
         }
 
-        /* Responsiveness */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;

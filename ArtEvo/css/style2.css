@@ -3,13 +3,12 @@ body {
             font-family: "Afacad Flux";
         }
 
-        /* Header */
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
-            background: #ffffff;
+            background: #E19E11;
             border-bottom: 1px solid #ddd;
             position: sticky;
             top: 0;
@@ -31,14 +30,13 @@ body {
         nav ul li a {
             text-decoration: none;
             font-weight: bold;
-            color: #333;
+            color: #663E1F;
         }
 
         nav ul li a:hover {
-            color: #1877f2;
+            color: #ffffff;
         }
 
-        /* Carousel */
         .carousel-container {
             position: relative;
             width: 100%;
@@ -58,18 +56,18 @@ body {
             left: 50%;
             transform: translateX(-50%);
             padding: 12px 25px;
-            background: #1877f2;
+            background: #1E424D;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-family: "Afacad Flux";
         }
 
         #viewGalleryBtn:hover {
-            background: #145dbf;
+            background: #77B5D3;
         }
 
-        /* Description */
         #description {
             padding: 40px;
             text-align: center;
@@ -81,6 +79,7 @@ body {
             gap: 20px;
             padding: 40px;
             flex-wrap: wrap;
+            text-align: center;
         }
 
         .mv-card {
