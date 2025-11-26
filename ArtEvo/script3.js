@@ -14,7 +14,6 @@ setInterval(() => {
             carousel.src = images[index];
         }, 3000);
 
-// ARTWORK DATA
 const artworks = {
 photography: [
 { title: "Sunset Bliss", img: "p1.jpg", artist: "Artist One", price: "₱450", description: "A warm and calming sunset over the ocean horizon.", medium: "Oil on Canvas" },
