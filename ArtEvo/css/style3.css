@@ -1,28 +1,57 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Afacad Flux";
     margin: 0;
     background: #f7f7f7;
-}
-/* HEADER */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: #ffffff;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-.logo { width: 70px; height: auto; }
-nav ul { display: flex; gap: 20px; list-style: none; margin: 0; }
-nav ul li a { text-decoration: none; font-weight: bold; color: #333; }
-nav ul li a:hover { color: #1877f2; }
+     }
 
-/* CAROUSEL */
-.carousel-container { position: relative; width: 100%; height: 350px; overflow: hidden; }
-.carousel-container img { width: 100%; height: 350px; object-fit: cover; }
+header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #E19E11;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;  
+    }
+
+.logo {
+            width: 70px;
+            height: auto;
+    }
+
+nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+        }
+
+nav ul li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #663E1F;
+        }
+
+nav ul li a:hover {
+            color: #ffffff;
+        }
+    
+.carousel-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+        }
+
+.carousel-container img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+
 
 /* CATEGORY NAVIGATION */
 .category-nav {

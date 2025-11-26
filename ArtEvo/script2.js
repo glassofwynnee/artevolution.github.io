@@ -1,4 +1,4 @@
-    //Image carousel
+    //for image carousel
    const carousel = document.getElementById("carouselImage");
    const images = [
     "carousel/artevo.png",
@@ -15,7 +15,7 @@
             carousel.src = images[index];
         }, 3000);
 
-    // View gallery
+    //gallery
        document.getElementById("viewGalleryBtn").addEventListener("click", () => {
     window.location.href = "gallery.html"; 
 });

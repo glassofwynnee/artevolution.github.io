@@ -3,7 +3,7 @@ body {
             font-family: "Afacad Flux";
         }
 
-        header {
+header {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -15,42 +15,42 @@ body {
             z-index: 10;
         }
 
-        .logo {
+.logo {
             width: 70px;
             height: auto;
         }
 
-        nav ul {
+nav ul {
             display: flex;
             gap: 20px;
             list-style: none;
             margin: 0;
         }
 
-        nav ul li a {
+nav ul li a {
             text-decoration: none;
             font-weight: bold;
             color: #663E1F;
         }
 
-        nav ul li a:hover {
+nav ul li a:hover {
             color: #ffffff;
         }
 
-        .carousel-container {
+.carousel-container {
             position: relative;
             width: 100%;
             height: 450px;
             overflow: hidden;
         }
 
-        .carousel-container img {
+.carousel-container img {
             width: 100%;
             height: 450px;
             object-fit: cover;
         }
 
-        #viewGalleryBtn {
+#viewGalleryBtn {
             position: absolute;
             bottom: 20px;
             left: 50%;
@@ -64,16 +64,16 @@ body {
             font-family: "Afacad Flux";
         }
 
-        #viewGalleryBtn:hover {
+#viewGalleryBtn:hover {
             background: #77B5D3;
         }
 
-        #description {
+#description {
             padding: 40px;
             text-align: center;
         }
 
-        .mv-section {
+.mv-section {
             display: flex;
             gap: 20px;
             padding: 40px;
@@ -81,7 +81,7 @@ body {
             text-align: center;
         }
 
-        .mv-card {
+.mv-card {
             flex: 1;
             min-width: 280px;
             padding: 20px;
@@ -90,37 +90,36 @@ body {
             transition: 0.3s;
         }
 
-        .mv-card:hover {
+.mv-card:hover {
             transform: scale(1.05);
             background: #E5D595;
         }
 
-        /* Featured Artists */
-        #artists {
+
+#artists {
             padding: 40px;
             text-align: center;
         }
 
-        .artist-grid {
+.artist-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
-        .artist-card img {
+.artist-card img {
             width: 100%;
             height: 220px;
             object-fit: cover;
             border-radius: 10px;
         }
 
-        .artist-card {
+.artist-card {
             padding: 10px;
         }
 
-        /* Responsive */
-        @media (max-width: 600px) {
-            nav ul {
+@media (max-width: 600px) {
+    nav ul {
                 display: none;
             }
         }
