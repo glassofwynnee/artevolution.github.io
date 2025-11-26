@@ -1,6 +1,12 @@
     //Image carousel
-    const carousel = document.getElementById("carouselImage");
-        const images = ["art1.jpg", "art2.jpg", "art3.jpg"];        
+   const carousel = document.getElementById("carouselImage");
+   const images = [
+    "carousel/concepcion.jpeg",
+    "carousel/guevarra.png",
+    "carousel/janda.png",
+    "carousel/santos.jpeg",
+];
+
         let index = 0;
 
         setInterval(() => {
