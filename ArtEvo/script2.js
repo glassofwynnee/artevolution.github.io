@@ -8,7 +8,8 @@
             carousel.src = images[index];
         }, 3000);
 
-    // Scroll
-        document.getElementById("viewGalleryBtn").addEventListener("click", () => {
-            document.getElementById("artists").scrollIntoView({ behavior: "smooth" });
-        });
+    // View gallery
+       document.getElementById("viewGalleryBtn").addEventListener("click", () => {
+    window.location.href = "gallery.html"; 
+});
+
