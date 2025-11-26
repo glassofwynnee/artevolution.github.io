@@ -51,9 +51,6 @@ nav ul li a:hover {
             object-fit: cover;
         }
 
-
-
-/* CATEGORY NAVIGATION */
 .category-nav {
     display: flex;
     justify-content: center;
@@ -72,7 +69,7 @@ nav ul li a:hover {
     transition: 0.2s;
 }
 .category-nav button:hover {
-    color: #1877f2;
+    color: #77B5D3;
     transform: scale(1.1);
 }
 
