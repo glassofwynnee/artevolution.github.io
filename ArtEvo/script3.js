@@ -29,7 +29,7 @@ traditionalart: [
     { title: "Blooming Grace", img: "p4.jpg", artist: "Artist One", price: "₱420", description: "A vivid floral painting symbolizing growth.", medium: "Oil on Canvas" },
     { title: "Silent Hills", img: "p5.jpg", artist: "Artist One", price: "₱390", description: "Peaceful rolling hills during sunset.", medium: "Acrylic" }
 ],
-digital: [
+digitalart: [
 { title: "Starry Boulevard", img: "p1.jpg", artist: "Artist One", price: "₱450", description: "A warm and calming sunset over the ocean horizon.", medium: "Oil on Canvas" },
     { title: "Golden Fields", img: "p2.jpg", artist: "Artist One", price: "₱380", description: "Golden wheat fields dancing with the afternoon wind.", medium: "Acrylic on Canvas" },
     { title: "Ocean Dreams", img: "p3.jpg", artist: "Artist One", price: "₱500", description: "Soft blue waves crashing on the shore.", medium: "Watercolor" },
