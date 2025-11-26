@@ -1,195 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ArtEvo Gallery | Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
 
-    <style>
-        body { margin: 0; font-family: Arial, sans-serif; }
+    <title> ArtEvo | Art is Evolving through Us </title>
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+}
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.logo { width: 70px; height: auto; }
+nav ul { display: flex; gap: 20px; list-style: none; margin: 0; }
+nav ul li a { text-decoration: none; font-weight: bold; color: #333; }
+nav ul li a:hover { color: #1877f2; }
 
-        /* HEADER */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background: #ffffff;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+/* CAROUSEL */
+.carousel-container { position: relative; width: 100%; height: 350px; overflow: hidden; }
+.carousel-container img { width: 100%; height: 350px; object-fit: cover; }
 
-        .logo { width: 70px; height: auto; }
+/* CATEGORY NAVIGATION */
+.category-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #f7f7f7;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.category-nav button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.category-nav button:hover {
+    color: #1877f2;
+    transform: scale(1.1);
+}
 
-        nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-            margin: 0;
-        }
+/* GALLERY GRID */
+.gallery-section { padding: 30px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.art-item { text-align: center; cursor: pointer; }
+.art-item img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; }
+.art-item h4 { margin: 10px 0 5px; }
 
-        nav ul li a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #333;
-        }
+/* ARTWORK DETAILS */
+.art-container { max-width: 900px; margin: 40px auto; padding: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start; background: #fff; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); display: none; }
+.art-container img { width: 100%; border-radius: 20px; }
+.art-info h2 { font-size: 2rem; margin-bottom: 10px; }
+.art-info p { line-height: 1.6; margin-bottom: 10px; }
+.art-info .price { font-size: 1.4rem; font-weight: 600; margin: 15px 0; }
+.art-info .btn { display: inline-block; background: #6c63ff; color: white; padding: 12px 20px; border-radius: 12px; text-decoration: none; transition: 0.3s; font-weight: 600; }
+.art-info .btn:hover { background: #554fe0; }
+.back-btn { display: none; margin: 20px auto; background: #ccc; padding: 10px 20px; border-radius: 10px; cursor: pointer; border: none; }
+.back-btn:hover { background: #aaa; }
 
-        nav ul li a:hover { color: #1877f2; }
-
-        /* CAROUSEL */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            height: 350px;
-            overflow: hidden;
-        }
-
-        .carousel-container img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-        }
-
-        /* SECOND DASHBOARD */
-        .category-nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: #f7f7f7;
-            padding: 15px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .category-nav button {
-            padding: 10px 20px;
-            background: none;
-            border: none;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .category-nav button:hover {
-            color: #1877f2;
-            transform: scale(1.1);
-        }
-
-        /* GALLERY GRID */
-        .gallery-section {
-            padding: 30px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .art-item {
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .art-item img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .art-item h4 { margin: 10px 0 5px; }
-
-        /* RESPONSIVE */
-        @media (max-width: 600px) {
-            nav ul { display: none; }
-        }
-    </style>
+/* Responsive */
+@media (max-width: 768px) { .art-container { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { nav ul { display: none; } }
+</style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <img src="logo.png" class="logo" alt="ArtEvo Logo" />
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- HEADER -->
+<header>
+<img src="logo.png" class="logo" alt="ArtEvo Logo" />
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact Us</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+</nav>
+</header>
 
-    <!-- CAROUSEL -->
-    <section class="carousel-container">
-        <img id="galleryCarouselImg" src="g1.jpg" alt="Gallery Banner" />
-    </section>
+<!-- CAROUSEL -->
+<section class="carousel-container" id="home">
+<img id="galleryCarouselImg" src="g1.jpg" alt="Gallery Banner" />
+</section>
 
-    <!-- CATEGORY NAVIGATION -->
-    <div class="category-nav">
-        <button onclick="loadCategory('painting')">Painting</button>
-        <button onclick="loadCategory('digital')">Digital Art</button>
-        <button onclick="loadCategory('sculpture')">Sculpture</button>
-        <button onclick="loadCategory('photography')">Photography</button>
-    </div>
+<!-- CATEGORY NAVIGATION -->
+<div class="category-nav">
+<button onclick="loadCategory('painting')">Painting</button>
+<button onclick="loadCategory('digital')">Digital Art</button>
+<button onclick="loadCategory('sculpture')">Sculpture</button>
+<button onclick="loadCategory('photography')">Photography</button>
+</div>
 
-    <!-- GALLERY -->
-    <section class="gallery-section">
-        <h2 id="categoryTitle">All Artworks</h2>
-        <div id="galleryGrid" class="gallery-grid"></div>
-    </section>
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+<h2 id="categoryTitle">All Artworks</h2>
+<div id="galleryGrid" class="gallery-grid"></div>
+</section>
 
-    <script>
-        const carouselImages = ["g1.jpg", "g2.jpg", "g3.jpg"]; // update with your images
-        let index = 0;
+<!-- BACK BUTTON -->
+<button class="back-btn" onclick="showGallery()">← Back to Gallery</button>
 
-        setInterval(() => {
-            index = (index + 1) % carouselImages.length;
-            document.getElementById("galleryCarouselImg").src = carouselImages[index];
-        }, 3000);
+<!-- ARTWORK DETAILS -->
+<section class="art-container" id="artDetails">
+<img id="artImage" src="" alt="Artwork Image" />
+<div class="art-info">
+<h2 id="artTitle"></h2>
+<p><strong>Artist:</strong> <span id="artArtist"></span></p>
+<p><strong>Bidding Price:</strong> <span id="artPrice"></span></p>
+<p><strong>Description:</strong></p>
+<p id="artDescription"></p>
+<p><strong>Medium Used:</strong> <span id="artMedium"></span></p>
+<a href="#" class="btn">Buy Artwork</a>
+</div>
+</section>
 
-        const artworks = {
-            painting: [
-                { title: "Sunset Bliss", img: "p1.jpg" },
-                { title: "Golden Fields", img: "p2.jpg" }
-            ],
-            digital: [
-                { title: "Cyber Dreams", img: "d1.jpg" },
-                { title: "Neon City", img: "d2.jpg" }
-            ],
-            sculpture: [
-                { title: "Marble Grace", img: "s1.jpg" },
-                { title: "Bronze Warrior", img: "s2.jpg" }
-            ],
-            photography: [
-                { title: "Urban Silence", img: "ph1.jpg" },
-                { title: "Nature's Breath", img: "ph2.jpg" }
-            ]
-        };
+<script>
+// CAROUSEL
+const carouselImages = ["g1.jpg","g2.jpg","g3.jpg"];
+let index = 0;
+setInterval(() => {
+    index = (index + 1) % carouselImages.length;
+    document.getElementById("galleryCarouselImg").src = carouselImages[index];
+}, 3000);
 
-        function loadCategory(cat) {
-            document.getElementById("categoryTitle").innerText = cat.toUpperCase();
-            const grid = document.getElementById("galleryGrid");
-            grid.innerHTML = "";
+// ARTWORK DATA
+const artworks = {
+painting: [
+{ title: "Sunset Bliss", img: "p1.jpg", artist: "Artist One", price: "₱450", description: "A warm and calming sunset over the ocean horizon.", medium: "Oil on Canvas" },
+{ title: "Golden Fields", img: "p2.jpg", artist: "Artist One", price: "₱380", description: "Golden wheat fields dancing with the afternoon wind.", medium: "Acrylic on Canvas" }
+],
+digital: [
+{ title: "Cyber Dreams", img: "d1.jpg", artist: "Artist Two", price: "₱520", description: "A futuristic vision of cybernetic consciousness.", medium: "Digital Painting" },
+{ title: "Neon City", img: "d2.jpg", artist: "Artist Two", price: "₱600", description: "A glowing neon metropolis at night.", medium: "Digital Art" }
+],
+sculpture: [
+{ title: "Marble Grace", img: "s1.jpg", artist: "Artist Three", price: "₱700", description: "Elegant marble sculpture.", medium: "Marble" },
+{ title: "Bronze Warrior", img: "s2.jpg", artist: "Artist Three", price: "₱800", description: "A heroic bronze sculpture.", medium: "Bronze" }
+],
+photography: [
+{ title: "Urban Silence", img: "ph1.jpg", artist: "Artist Four", price: "₱400", description: "Quiet city streets captured at dawn.", medium: "Photography" },
+{ title: "Nature's Breath", img: "ph2.jpg", artist: "Artist Four", price: "₱450", description: "Breathtaking natural landscapes.", medium: "Photography" }
+]
+};
 
-            artworks[cat].forEach(art => {
-                const item = document.createElement("div");
-                item.className = "art-item";
-                item.innerHTML = `
-                    <img src="${art.img}" alt="${art.title}">
-                    <h4>${art.title}</h4>
-                `;
-                item.addEventListener("click", () => {
-                    window.location.href = `artwork.html?title=${encodeURIComponent(art.title)}`;
-                });
-                grid.appendChild(item);
-            });
-        }
+// LOAD CATEGORY
+function loadCategory(cat){
+document.getElementById("categoryTitle").innerText = cat.toUpperCase();
+const grid = document.getElementById("galleryGrid");
+grid.innerHTML = "";
+artworks[cat].forEach(art=>{
+    const item = document.createElement("div");
+    item.className = "art-item";
+    item.innerHTML = `<img src="${art.img}" alt="${art.title}"><h4>${art.title}</h4>`;
+    item.addEventListener("click", ()=>{
+        showArtworkDetails(art);
+    });
+    grid.appendChild(item);
+});
+}
 
-        loadCategory("painting");
-    </script>
+// SHOW ARTWORK DETAILS
+function showArtworkDetails(art){
+document.getElementById("artDetails").style.display = "grid";
+document.querySelector(".back-btn").style.display = "inline-block";
+document.getElementById("gallery").style.display = "none";
+document.getElementById("galleryGrid").innerHTML = "";
+document.getElementById("artImage").src = art.img;
+document.getElementById("artTitle").textContent = art.title;
+document.getElementById("artArtist").textContent = art.artist;
+document.getElementById("artPrice").textContent = art.price;
+document.getElementById("artDescription").textContent = art.description;
+document.getElementById("artMedium").textContent = art.medium;
+}
+
+// BACK TO GALLERY
+function showGallery(){
+document.getElementById("artDetails").style.display = "none";
+document.querySelector(".back-btn").style.display = "none";
+document.getElementById("gallery").style.display = "block";
+}
+
+// INITIAL LOAD
+loadCategory("painting");
+</script>
 </body>
 </html>
